@@ -1,16 +1,17 @@
 """ This unnecessary class implements sets using lists."""
 class MySet:
+    
+    def __repr__(self):
+        """ toString """
+        self.myset.sort()
+        return "{%s}" % str(self.myset)[1:-1]
+
     """ This unnecessary class implements sets using lists.
     """
     def __init__(self, element=None):
         """ constructor. """
         self.myset = list()  # empty set
         self.union(element)
-
-    def __repr__(self):
-        """ toString """
-        self.myset.sort()
-        return "{%s}" % str(self.myset)[1:-1]
 
     def __eq__(self, elements):
         """ equals
@@ -77,7 +78,7 @@ class MySet:
             if element  not in self.myset:
                 self.myset.append(element)
 
-        return self.myset
+        return self
 
     def intersection(self, elements):
         """ Intersection collections
