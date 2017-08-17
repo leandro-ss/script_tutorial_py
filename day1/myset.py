@@ -71,12 +71,19 @@ class MySet:
         @param:element to union
         """
         if isinstance(element, list):
+
             for el in element:
                 if el not in self.myset:
                     self.myset.append(el)
-        if isinstance(element, int):
+
+        elif isinstance(element, int):
             if element  not in self.myset:
                 self.myset.append(element)
+
+        elif isinstance(element, MySet):
+            self.union(element.myset)
+        else:
+            raise Exception("Type not aceptable")
 
         return self
 
@@ -129,13 +136,27 @@ class MySet:
 
         return result
 
+import os
+import sys
+import traceback
+
+def set_input():
+    """ Read a line with set data. """
+    try:
+        line = sys.stdin.readline().strip()
+        line = "[%s]" % line.replace(' ', ',')
+        return MySet(eval(line))
+    except:
+        traceback.print_exc()
+        print("Illegal set input data")
+        sys.exit(1)
 
 if __name__=="__main__":      
     ## Read and print set data
     my = MySet()
 
-    my.union([2, 5, 4, 10, 12])
+    my.union(eval("2,5,4,10,12"))
     print(my)
 
-    my.union([3, 4, 5, 6, 10])
+    my.union(eval("2,5,4,10,12"))
     print(my)

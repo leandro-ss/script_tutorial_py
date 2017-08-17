@@ -50,8 +50,6 @@ def apply_op(op, i, j):
             return method(set_vars[i-1],j)
     except:
         raise
-
-
         
 if __name__=="__main__":        
         
@@ -73,4 +71,4 @@ if __name__=="__main__":
                 traceback.print_exc()
                 print("Illegal operation:", line)
     print("Done!")
-    
+
