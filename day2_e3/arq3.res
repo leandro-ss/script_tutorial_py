@@ -1,0 +1,4 @@
+[]()[()[]]: balanced
+()()[: unbalanced
+((([[[]]]))): balanced
+)(: unbalanced
