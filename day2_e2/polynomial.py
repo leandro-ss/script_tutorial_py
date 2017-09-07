@@ -54,3 +54,10 @@ class Polynomial:
 
                 
                 
+
+if __name__=="__main__":
+    ## Read and print set data
+    
+    print(arg)
+    print(parens(arg))
+
