@@ -1,0 +1,20 @@
+test        : inserted
+
+1 words
+<trie.Node object at 0x00000203F12BA4A8>
+<trie.Node object at 0x00000203F12BA4E0>
+<trie.Node object at 0x00000203F12BA518>
+<trie.Node object at 0x00000203F12BA550>
+4 letters
+<trie.Node object at 0x00000203F12BA4A8>
+<trie.Node object at 0x00000203F12BA4E0>
+<trie.Node object at 0x00000203F12BA518>
+<trie.Node object at 0x00000203F12BA550>
+5 nodes
+
+test        : removed
+
+0 words
+0 letters
+1 nodes
+
