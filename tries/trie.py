@@ -77,7 +77,7 @@ class Trie:
                 result = self.deleteFromNode( word, node.nodes[node.letters.index(word[posit])] , posit+1)
 
             except ValueError:
-                #print ("ValueError")
+                print ("ValueError")
                 return False, 0
 
             #print ("before::len (node.nodes)="+str(len (node.nodes)))
@@ -87,14 +87,18 @@ class Trie:
 
         if result:
             #print ("afterif::len (node.nodes)="+str(len (node.nodes)))
-            #print ("after::posit="+str(posit))
-            #print ("after::word[posit]="+str(word[posit]))
-            #print ("after.node.letters::"+str(node.letters))
-            #node.letters.remove(word[posit+1])
-            node.letters = []
-            node.nodes = []
-            
-            
+            print ("after::posit="+str(posit))
+            print ("after::word[posit-1]="+str(word[posit-1]))
+            print ("after.node.letters::"+str(node.letters))
+            #node.letters = []
+            #node.nodes = []
+            if len(node.nodes) >= 1 and posit:
+                node.end = not node.end
+            elif node.nodes > 1:
+                node.nodes[node.letters.index(word[posit-1])] = []
+                node.letters.remove(word[posit-1])
+                
+
         return result, posit
 
         
