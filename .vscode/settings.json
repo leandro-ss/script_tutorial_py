@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "python3.6",
+    "python.venvPath": ".venv",
+    "python.linting.pylintPath": "pylint"
+}
